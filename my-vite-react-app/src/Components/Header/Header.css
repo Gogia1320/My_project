@@ -1,0 +1,272 @@
+/* Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Progress Steps */
+.progress-steps {
+  display: flex;
+  align-items: center;
+}
+
+.step {
+  text-align: center;
+  color: #999;
+  position: relative;
+}
+
+.step span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.step p {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+
+/* Lines Between Circles */
+.line {
+  width: 50px; /* Adjust for spacing */
+  height: 2px;
+  margin-top: -10px; /* Center with circles */
+}
+
+.completed-line {
+  background-color: #4caf50; /* Solid green for completed steps */
+}
+
+.active-line {
+  background-color: #007bff; /* Solid blue for active step */
+}
+
+.incomplete-line {
+  border-top: 2px dotted #ccc; /* Dotted gray for incomplete steps */
+}
+
+/* Completed Step */
+.step.completed {
+  color: #4caf50;
+}
+
+.step.completed span {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Active Step */
+.step.active {
+  color: #007bff;
+}
+
+.step.active span {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Header Icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon Button */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+}
+
+.icon {
+  font-size: 24px;
+  color: #fff; /* Default color: White */
+  transition: all 0.3s ease;
+}
+
+.icon-button:hover .icon {
+  color: #f4f7fa; /* Hover color: Blue */
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Tooltip for Icons */
+.icon-button:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7fd7fe;;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.icon-button::after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Responsive Design */
+
+/* For Tablets and Larger Mobile Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Header Container */
+  .header-container {
+    padding: 10px 15px;
+    flex-direction: column; /* Stack header elements vertically */
+    height: auto;
+  }
+
+  /* Progress Steps */
+  .progress-steps {
+    flex-direction: column; /* Stack steps vertically */
+    align-items: flex-start; /* Align steps to the left */
+  }
+
+  .step {
+    margin-bottom: 10px; /* Add spacing between steps */
+    text-align: left;
+  }
+
+  .step span {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 8px 12px;
+  }
+
+  .line {
+    width: 100%; /* Make the lines take up full width */
+    margin-top: 5px; /* Adjust line positioning */
+  }
+
+  /* Header Icons */
+  .header-icons {
+    gap: 10px; /* Adjust spacing between icons */
+  }
+
+  .icon-button {
+    font-size: 18px; /* Reduce icon size */
+  }
+
+  /* Tooltip */
+  .icon-button:hover::after {
+    font-size: 10px; /* Reduce tooltip font size */
+    padding: 4px 6px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Header Container */
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    height: auto;  /* Auto height for smaller screens */
+  }
+
+  .header-icons {
+    gap: 15px;
+  }
+
+  .icon-button {
+    font-size: 18px;
+  }
+
+  /* Progress Steps */
+  .progress-steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step span {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  /* Heading */
+  .header-container h1 {
+    font-size: 24px;  /* Adjust for smaller screens */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Header Container */
+  .header-container {
+    padding: 10px 15px;
+  }
+
+  .header-icons {
+    gap: 12px;
+  }
+
+  .icon-button {
+    font-size: 16px;
+  }
+
+  /* Progress Steps */
+  .progress-steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step span {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Heading */
+  .header-container h1 {
+    font-size: 20px;  /* Further adjust for smaller screens */
+    margin-bottom: 8px;
+  }
+}
+
+/* Larger Devices (Tablet and above) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Header Container */
+  .header-container {
+    padding: 15px 30px;
+    height: 70px;
+  }
+
+  /* Heading */
+  .header-container h1 {
+    font-size: 28px;  /* Slightly larger on tablets */
+  }
+
+  /* Progress Steps */
+  .progress-steps {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .step span {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
