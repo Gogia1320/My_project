@@ -1,8 +1,8 @@
 ## Approach in building the project
 
 ## 1. Layout Design
- Sidebar: Create a fixed sidebar for navigation with items like Dashboard, My Cases, Activities, etc.
- Main Content Area: Design a clean layout for the multi-step form with sections for Claim Value, Place, Language, and file uploads.
+- Sidebar: Create a fixed sidebar for navigation with items like Dashboard, My Cases, Activities, etc.
+ - Main Content Area: Design a clean layout for the multi-step form with sections for Claim Value, Place, Language, and file uploads.
 
 ## 2. Multi-Step Form
  Add a step indicator at the top (e.g., Preliminary, Your Details, etc.).
@@ -10,7 +10,7 @@
  Use clear labels and placeholders for form fields like Contract Value and Claim Value.
 
 ## 3. File Upload
-- Design a *drag-and-drop file upload component* for documents:
+  - Design a *drag-and-drop file upload component* for documents:
   - Use icons and labels (e.g., "Upload the Contract").
   - Add a "+" button for uploading additional documents.
   - Display file format restrictions (e.g., Max 2MB, PDF).
